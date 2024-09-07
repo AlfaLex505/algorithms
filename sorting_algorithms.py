@@ -38,6 +38,21 @@ def green_print(text):
     print(f"\033[92m {text}\033[00m")
 
 
+def print_colored_list(random_list):
+    """
+    Function for printing a list colored based on wether or not the elements
+    are correctly sort
+    """
+    k = 0
+    print('\nList iteration:')
+    while k < len(random_list):
+        if random_list[k -1] <= random_list[k] or k == 0:
+            green_print(random_list[k])
+        else:
+            red_print(random_list[k])
+        k += 1
+
+
 def insertion_sort(random_list):
     """
     Function for programming a sorting algorithm.
@@ -51,14 +66,7 @@ def insertion_sort(random_list):
             j -= 1
         random_list[j + 1] = key
 
-        k = 0
-        print('\nList iteration:')
-        while k < len(random_list):
-            if random_list[k -1] <= random_list[k] or k == 0:
-                green_print(random_list[k])
-            else:
-                red_print(random_list[k])
-            k += 1
+        print_colored_list(random_list)
 
 
 def main():
