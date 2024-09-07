@@ -24,17 +24,28 @@ def generate_random_list(iterations):
     return random_list
 
 
-def insertion_sort():
+def red_print(text):
     """
-    This function will contain the insertion sort algorithm.
+    Function for printing red text.
     """
+    print(f"\033[91m {text}\033[00m")
+
+
+def green_print(text):
+    """
+    Function for printing red text.
+    """
+    print(f"\033[92m {text}\033[00m")
 
 
 def main():
     """
     Where the magic happens!
     """
-    random_list = generate_random_list(10)
+    # random_list = generate_random_list(10)
+    random_list = [72, 21, 19, 44, 48, 77, 53, 98, 46, 63]
+    green_print('Hello in color!!!')
+    # insertion_sort(random_list)
 
 
 if __name__ == '__main__':
